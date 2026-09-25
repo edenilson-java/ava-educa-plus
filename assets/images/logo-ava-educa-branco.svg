@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 64" role="img" aria-labelledby="title description">
+  <title id="title">AVA-EDUCA+</title>
+  <desc id="description">Livro aberto ao lado do nome AVA-EDUCA+</desc>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+    <path d="M6 14c13-4 25-1 32 7v34c-8-7-19-10-32-7z"/>
+    <path d="M70 14c-13-4-25-1-32 7v34c8-7 19-10 32-7z"/>
+    <path d="M38 21v34"/>
+  </g>
+  <text x="86" y="43" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="31" font-weight="700">AVA-EDUCA<tspan fill="#FFFFFF">+</tspan></text>
+</svg>
