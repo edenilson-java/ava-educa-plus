@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | AVA-EDUCA+</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/simbolo-ava-educa.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <script type="module" src="./dashboard.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header__content">
+        <img class="app-header__logo" src="../assets/images/logo-ava-educa.svg" alt="AVA-EDUCA+">
+        <p class="app-header__user">Olá, <span id="usuario-nome"></span></p>
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-controls="navegacao-principal" aria-expanded="false" hidden>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <nav id="navegacao-principal" class="side-nav" aria-label="Navegação principal" hidden>
+        <ul class="side-nav__list">
+          <li><button id="menu-dashboard" class="nav-button" type="button" aria-current="page">Dashboard</button></li>
+          <li><button class="nav-button" type="button" disabled>Cursos</button></li>
+          <li><button id="menu-cadastro" class="nav-button" type="button">Cadastro de Alunos</button></li>
+          <li><button id="menu-sair" class="nav-button" type="button">Sair</button></li>
+        </ul>
+      </nav>
+
+      <main class="app-main">
+        <div class="page-heading">
+          <h1>Dashboard</h1>
+          <p>Cursos em que você atua.</p>
+        </div>
+
+        <p id="cursos-message" class="message" role="alert" aria-live="polite"></p>
+        <section id="lista-cursos" class="courses-grid" aria-label="Cursos do usuário"></section>
+
+        <footer class="app-footer">AVA-EDUCA+</footer>
+      </main>
+    </div>
+  </body>
+</html>
