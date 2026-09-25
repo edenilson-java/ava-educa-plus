@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos | AVA-EDUCA+</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/simbolo-ava-educa.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./cadastro-aluno.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script type="module" src="./cadastro-aluno.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header__content">
+        <img class="app-header__logo" src="../assets/images/logo-ava-educa.svg" alt="AVA-EDUCA+">
+        <p class="app-header__user">Olá, <span id="usuario-nome"></span></p>
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-controls="navegacao-principal" aria-expanded="false" hidden>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <nav id="navegacao-principal" class="side-nav" aria-label="Navegação principal" hidden>
+        <ul class="side-nav__list">
+          <li><button id="menu-dashboard" class="nav-button" type="button">Dashboard</button></li>
+          <li><button class="nav-button" type="button" disabled>Cursos</button></li>
+          <li><button id="menu-cadastro" class="nav-button" type="button" aria-current="page">Cadastro de Alunos</button></li>
+          <li><button id="menu-sair" class="nav-button" type="button">Sair</button></li>
+        </ul>
+      </nav>
+
+      <main class="app-main student-main">
+        <div class="page-heading">
+          <h1>Cadastro de Alunos</h1>
+          <p>Preencha os dados obrigatórios para incluir um aluno.</p>
+        </div>
+
+        <form id="form-aluno" class="student-form surface" novalidate>
+          <fieldset class="form-section">
+            <legend>Dados pessoais</legend>
+            <div class="form-grid">
+              <div class="form-field form-field--full">
+                <label for="nome">Nome Completo <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="nome" name="nome" type="text" minlength="4" maxlength="80" required>
+                <p id="erro-nome" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="genero">Gênero <span class="required-mark" aria-hidden="true">*</span></label>
+                <select id="genero" name="genero" required>
+                  <option value="">Selecione</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
+                <p id="erro-genero" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="dataNascimento">Data de Nascimento <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="dataNascimento" name="dataNascimento" type="text" inputmode="numeric" placeholder="DD/MM/YYYY" required>
+                <p id="erro-dataNascimento" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="cpf">CPF <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" required>
+                <p id="erro-cpf" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="telefone">Telefone <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="telefone" name="telefone" type="text" inputmode="numeric" required>
+                <p id="erro-telefone" class="field-error"></p>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" required>
+                <p id="erro-email" class="field-error"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Endereço</legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="cep">CEP <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="cep" name="cep" type="text" inputmode="numeric" required>
+                <p id="erro-cep" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="cidade">Cidade <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="cidade" name="cidade" type="text" required>
+                <p id="erro-cidade" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="estado">Estado <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="estado" name="estado" type="text" required>
+                <p id="erro-estado" class="field-error"></p>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="logradouro">Logradouro <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="logradouro" name="logradouro" type="text" required>
+                <p id="erro-logradouro" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="numero">Número <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="numero" name="numero" type="text" inputmode="numeric" required>
+                <p id="erro-numero" class="field-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="complemento">Complemento (opcional)</label>
+                <input id="complemento" name="complemento" type="text">
+                <p class="field-error"></p>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="bairro">Bairro <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="bairro" name="bairro" type="text" required>
+                <p id="erro-bairro" class="field-error"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">Salvar</button>
+          </div>
+          <p id="cadastro-message" class="message" role="alert" aria-live="polite"></p>
+        </form>
+
+        <section class="students-section surface" aria-labelledby="students-title">
+          <div class="students-heading">
+            <h2 id="students-title">Alunos cadastrados</h2>
+            <p id="total-alunos"></p>
+          </div>
+
+          <div class="table-wrapper" tabindex="0" aria-label="Tabela com rolagem horizontal quando necessária">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Gênero</th>
+                  <th scope="col">Nascimento</th>
+                  <th scope="col">CPF</th>
+                  <th scope="col">Telefone</th>
+                  <th scope="col">E-mail</th>
+                  <th scope="col">CEP</th>
+                  <th scope="col">Cidade</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Logradouro</th>
+                  <th scope="col">Número</th>
+                  <th scope="col">Complemento</th>
+                  <th scope="col">Bairro</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-alunos"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="app-footer">AVA-EDUCA+</footer>
+      </main>
+    </div>
+  </body>
+</html>
