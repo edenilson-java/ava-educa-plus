@@ -1,0 +1,44 @@
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  min-width: 0;
+  padding: 1.5rem;
+  border-top: 4px solid var(--color-primary);
+}
+
+.course-card h2 {
+  margin-bottom: 1.25rem;
+}
+
+.course-card dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 0.75rem;
+  margin: 0;
+}
+
+.course-card dt {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.course-card dd {
+  margin: 0;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  text-align: center;
+}
