@@ -98,7 +98,7 @@ ava-educa-plus/
 
 ## Vídeo de apresentação
 
-[LINK DO VÍDEO]
+[Assistir à apresentação do AVA-EDUCA+](https://youtu.be/QHceSalAtj8)
 
 ## Melhorias futuras
 
