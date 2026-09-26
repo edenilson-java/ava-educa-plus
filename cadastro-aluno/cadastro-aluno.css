@@ -1,0 +1,88 @@
+.student-main {
+  min-width: 0;
+}
+
+.student-form,
+.students-section {
+  padding: 1.5rem;
+}
+
+.student-form {
+  margin-bottom: 1.5rem;
+}
+
+.form-section {
+  min-width: 0;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-section legend {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 0 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.5rem 1rem;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.form-actions .button {
+  width: 100%;
+}
+
+.students-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.students-heading h2,
+.students-heading p {
+  margin-bottom: 0;
+}
+
+.students-heading p {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field--full {
+    grid-column: 1 / -1;
+  }
+}

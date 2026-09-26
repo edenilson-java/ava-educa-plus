@@ -1,0 +1,66 @@
+.login-page {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 93, 170, 0.09) 0, rgba(0, 93, 170, 0.09) 8rem, transparent 8.125rem),
+    radial-gradient(circle at 85% 80%, rgba(0, 71, 128, 0.07) 0, rgba(0, 71, 128, 0.07) 10rem, transparent 10.125rem),
+    var(--color-background);
+}
+
+.login-main {
+  display: grid;
+  min-height: 100vh;
+  padding: 1rem;
+  place-items: center;
+}
+
+.login-card {
+  width: min(100%, 25rem);
+  padding: 1.5rem;
+}
+
+.login-logo {
+  width: auto;
+  height: 3rem;
+  margin: 0 auto 1.5rem;
+}
+
+.login-heading {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-heading p {
+  margin-bottom: 0;
+  color: var(--color-text-secondary);
+}
+
+#login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-field {
+  min-width: 0;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.forgot-password {
+  justify-self: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2rem;
+}
+
+@media (min-width: 769px) {
+  .login-main {
+    padding: 2rem;
+  }
+
+  .login-card {
+    padding: 2rem;
+  }
+}
